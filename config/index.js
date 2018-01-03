@@ -10,8 +10,8 @@ module.exports = {
     index: path.resolve(__dirname, '../server/views/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../server/views/'),
-    assetsSubDirectory: '../public',
+    assetsRoot: path.resolve(__dirname, '../server/public/'),
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     productionSourceMap: true,
     devtool: '#source-map',
