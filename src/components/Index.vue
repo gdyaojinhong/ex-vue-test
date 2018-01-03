@@ -1,13 +1,11 @@
 <template>
   <div class="hello">
     <nav-top></nav-top>
-    <h1>{{ msg }}</h1>
-    </ul>
   </div>
 </template>
 
 <script>
-import NavTop from './NavTop';
+import NavTop from './NavTop'
 export default {
   name: 'home',
   data () {
@@ -16,16 +14,16 @@ export default {
     }
   },
   components: {
-    "nav-top":NavTop
+    'nav-top': NavTop
   },
-  computed:{
+  computed: {
   },
-  beforeCreate(){
+  beforeCreate () {
 
   },
-  beforeMount(){
+  beforeMount () {
   },
-  mounted(){
+  mounted () {
   },
   methods: {
 
