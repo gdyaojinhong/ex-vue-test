@@ -27,10 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/__webpack_hmr', function(req, res) {
   res.send('')
 })
-app.get('/', (req, res) => {
-    res.redirect('app');
-});
-app.get('/app', routes.index);
+app.get('/', routes.index);
 
 
 // catch 404 and forward to error handler
