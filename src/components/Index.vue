@@ -1,11 +1,13 @@
 <template>
-  <div class="hello">
+  <div class="apptest">
     <nav-top></nav-top>
+    <nav-bom></nav-bom>
   </div>
 </template>
 
 <script>
 import NavTop from './NavTop'
+import NavBom from './NavBom'
 export default {
   name: 'home',
   data () {
@@ -14,7 +16,8 @@ export default {
     }
   },
   components: {
-    'nav-top': NavTop
+    'nav-top': NavTop,
+    'nav-bom': NavBom
   },
   computed: {
   },
@@ -33,18 +36,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
