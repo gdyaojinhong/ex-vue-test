@@ -1,6 +1,5 @@
 <template>
   <div class="apptest-homelst">
-    <input/>
   </div>
 </template>
 
@@ -10,7 +9,7 @@ export default {
   name: 'home',
   data () {
     return {
-      msg: 'home'
+      msg: ''
     }
   },
   components: {
@@ -23,6 +22,10 @@ export default {
   beforeMount () {
   },
   mounted () {
+    this.$http.get('/api/user/list').then((res) => {
+      console.log(res)
+      alert('后台资源调用成功')
+    })
   },
   methods: {
 
@@ -30,6 +33,5 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

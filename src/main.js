@@ -8,17 +8,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueRouter from 'vue-router'
-// import axios from 'axios'
 import Vuex from 'vuex'
 // import store from './store/index'
+// Vue.prototype.$http = axios;
 
-// Vue.use(axios)
+import axios from 'axios'
+Vue.prototype.$http = axios
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
