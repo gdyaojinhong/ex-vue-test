@@ -8,11 +8,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueRouter from 'vue-router'
-import axios from 'axios'
+// import axios from 'axios'
 import Vuex from 'vuex'
 // import store from './store/index'
 
-Vue.use(axios)
+// Vue.use(axios)
 Vue.use(VueRouter)
 Vue.use(Vuex)
 

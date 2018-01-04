@@ -1,13 +1,11 @@
 <template>
-  <div class="apptest">
-    <nav-top></nav-top>
-    <nav-bom></nav-bom>
+  <div class="apptest-homelst">
+    SHOWP
   </div>
 </template>
 
 <script>
-import NavTop from './NavTop'
-import NavBom from './NavBom'
+
 export default {
   name: 'home',
   data () {
@@ -16,8 +14,6 @@ export default {
     }
   },
   components: {
-    'nav-top': NavTop,
-    'nav-bom': NavBom
   },
   computed: {
   },

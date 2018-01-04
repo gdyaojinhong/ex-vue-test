@@ -1,17 +1,43 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="apptest">
+      <nav-top></nav-top>
+      <router-view></router-view>
+      <nav-bom></nav-bom>
+    </div>
   </div>
 </template>
 
 <script>
+import NavTop from '@/components/NavTop'
+import NavBom from '@/components/NavBom'
 export default {
-  name: 'app'
+  name: 'home',
+  data () {
+    return {
+      msg: 'home'
+    }
+  },
+  components: {
+    'nav-top': NavTop,
+    'nav-bom': NavBom
+  },
+  computed: {
+  },
+  beforeCreate () {
+
+  },
+  beforeMount () {
+  },
+  mounted () {
+  },
+  methods: {
+
+  }
 }
 </script>
 
 <style>
-
 * {
   padding: 0;
   margin: 0;

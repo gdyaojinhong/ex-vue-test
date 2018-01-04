@@ -1,10 +1,10 @@
 <template>
   <div class="header">
     <ul>
-      <li><a href="#">首页</a></li>
-      <li><a href="#">主题日报</a></li>
-      <li><a href="#">相册展示</a></li>
-      <li><a href="#">关于</a></li>
+      <li><a href="JavaScript:;" @click="navRout($event, 'index')">首页</a></li>
+      <li><a href="JavaScript:;" @click="navRout($event, 'daily')">主题日报</a></li>
+      <li><a href="JavaScript:;" @click="navRout($event, 'showP')">相册展示</a></li>
+      <li><a href="JavaScript:;" @click="navRout($event, 'about')">关于</a></li>
     </ul>
   </div>
 </template>
@@ -27,6 +27,10 @@ export default {
   mounted () {
   },
   methods: {
+    navRout (event, routName) {
+      console.log(routName)
+      this.$router.push({name: routName})
+    }
   }
 }
 </script>
