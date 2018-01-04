@@ -1,7 +1,9 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let user = require('../controls/user');
+let api = require('../api');
+let router = express.Router();
 
-/* GET home page. */
-exports.index = (req, res) => {
-    res.render('index');
-}
+router.get(api.userList, user.getUserList);
+
+module.exports = router;
+

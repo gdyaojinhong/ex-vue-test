@@ -1,6 +1,6 @@
 <template>
   <div class="apptest-homelst">
-    home
+    <input/>
   </div>
 </template>
 
