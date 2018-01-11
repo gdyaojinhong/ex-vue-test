@@ -1,26 +1,17 @@
 <template>
   <div id="app">
-    <div class="apptest">
-      <nav-top></nav-top>
-      <router-view></router-view>
-      <nav-bom></nav-bom>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import NavTop from '@/components/NavTop'
-import NavBom from '@/components/NavBom'
 export default {
   name: 'home',
   data () {
     return {
-      msg: 'home'
     }
   },
   components: {
-    'nav-top': NavTop,
-    'nav-bom': NavBom
   },
   computed: {
   },
@@ -43,6 +34,6 @@ export default {
   margin: 0;
 }
 body {
-  background-color: #F5F5F5;
+  background-color: #ffffff !important;
 }
 </style>

@@ -1,16 +1,14 @@
 <template>
-  <div class="apptest-homelst">
-    SHOWP
+  <div id="InContent">
+    InContent
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'home',
+  name: 'InContent',
   data () {
     return {
-      msg: 'home'
     }
   },
   components: {
@@ -30,6 +28,12 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #F5F5F5;
+}
 </style>
