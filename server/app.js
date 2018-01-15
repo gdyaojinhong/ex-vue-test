@@ -4,7 +4,7 @@ let favicon = require('serve-favicon');
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
-
+let fs = require('fs'); // 引入文件模块
 let router = require('./routes/index');
 let ejs = require('ejs');
 let app = express();
@@ -27,12 +27,11 @@ app.use(router);
 
 
 //处理webpack服务请求
-app.get('/__webpack_hmr', function(req, res) {
-  res.send('')
+app.get('*', function(req, res) {
+  const html = fs.readFileSync(path.resolve(__dirname, './views/index.html'),'utf-8');
+  res.send(html)
 })
-app.get('/', function (req, res) {
-  res.render('index');
-});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -47,15 +46,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/mydb";
- 
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  console.log("数据库已创建!");
-  db.close();
-});
-
 
 module.exports = app;

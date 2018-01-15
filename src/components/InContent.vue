@@ -1,6 +1,16 @@
 <template>
   <div id="InContent">
-    InContent
+    <el-input
+      placeholder="请输入内容"
+      v-model="inputName"
+      clearable>
+    </el-input>
+    <el-input
+      placeholder="请输入内容"
+      v-model="inputID"
+      clearable>
+    </el-input>
+    <el-button type="primary" @click="commit">提交</el-button>
   </div>
 </template>
 
@@ -9,6 +19,8 @@ export default {
   name: 'InContent',
   data () {
     return {
+      inputName: '',
+      inputID: ''
     }
   },
   components: {
@@ -23,7 +35,19 @@ export default {
   mounted () {
   },
   methods: {
-
+    commit() {
+      var params = {
+        id : this.inputID,
+        name : this.inputName
+      }
+      this.$http({
+          method: 'get',
+          url: 'api/user/list',
+          params:params
+        }).then((res)=> {
+          console.log(res);
+      })
+    }
   }
 }
 </script>
