@@ -1,16 +1,5 @@
 <template>
   <div id="InContent">
-    <el-input
-      placeholder="请输入内容"
-      v-model="inputName"
-      clearable>
-    </el-input>
-    <el-input
-      placeholder="请输入内容"
-      v-model="inputID"
-      clearable>
-    </el-input>
-    <el-button type="primary" @click="commit">提交</el-button>
   </div>
 </template>
 

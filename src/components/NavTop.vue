@@ -1,6 +1,7 @@
 <template>
   <div id="navTop">
-    navTop
+    <div class="navTop-title">AkLS后台管理系统</div>
+    <div></div>
   </div>
 </template>
 
@@ -35,5 +36,11 @@ export default {
 }
 body {
   background-color: #F5F5F5;
+}
+.navTop-title{
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: bold;
 }
 </style>

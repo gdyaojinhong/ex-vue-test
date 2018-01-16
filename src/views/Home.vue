@@ -22,12 +22,10 @@
 </template>
 
 <script>
-
   import MenuLeft from "@/components/MenuLeft"
   import NavTop from "@/components/NavTop"
   import NavBom from "@/components/NavBom"
   import InContent from "@/components/InContent"
-
 export default {
   name: 'Home',
   data () {
