@@ -45,12 +45,6 @@ export default {
   beforeMount () {
   },
   mounted () {
-          this.$http({
-              method: 'get',
-              url: 'api/user/list',
-            }).then((res)=> {
-              console.log(res);
-          })
   },
   methods: {
 

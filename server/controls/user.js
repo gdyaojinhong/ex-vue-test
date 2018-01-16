@@ -35,7 +35,6 @@ const callback = function(err,data,res){
 
 exports.getUserList = (req, res) => {
   let params = req.query;
-  console.log(req);
   const p = models.Users;
 	p.create({
 		"name": params.name,
