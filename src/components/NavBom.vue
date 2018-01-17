@@ -1,5 +1,5 @@
 <template>
-  <div id="NavBom">
+  <div id="NavBom" class="NavBom">
     NavBom
   </div>
 </template>
@@ -35,5 +35,8 @@ export default {
 }
 body {
   background-color: #F5F5F5;
+}
+.NavBom{
+  text-align: center;
 }
 </style>
