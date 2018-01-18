@@ -18,12 +18,23 @@ const Schema = mongoose.Schema
  * user表
  */
 const UserSchema = new Schema({
-	name: String,
-	id: String,
-	url: String
+	_id: Schema.Types.ObjectId,
+	userName: String,
+	passWord: String,
+	createTime: Number,
+	UserId: String
+})
+
+const userListSchema = new Schema({
+	_id: Schema.Types.ObjectId,
+	userName: String,
+	passWord: String,
+	createTime: Number,
+	UserId: String
 })
 const Models = {
-	Users: mongoose.model('users', UserSchema,'users',false),  
+	Users: mongoose.model('users', UserSchema,'users',false),
+	UserList: mongoose.model('userList', userListSchema,'userList',false)
 }
 
 module.exports = Models;	

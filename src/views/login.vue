@@ -5,7 +5,7 @@
         <div class="login-title">
           <span>AkLS后台管理系统</span>
         </div>
-        <el-form :moble="loginForm" ref="loginForm" class="loginForm" :rules="rules">
+        <el-form :model="loginForm" ref="loginForm" class="loginForm" :rules="rules">
           <el-form-item prop="userName">
             <span>用户名</span>
             <span class="fa-tips"><i class="fa fa-user"></i></span>
@@ -17,15 +17,10 @@
             <el-input v-model="loginForm.passWord" placeholder="密码"></el-input>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary">
+            <el-button type="primary" @click="submitForm('loginForm')">
               登录
             </el-button>
           </el-form-item>
-<!--           <div class="login-tiparea">
-            <p class="wxtip">温馨提示：</p>
-            <p class="tip">未登录过的新用户，自动注册</p>
-            <p class="tip">注册过的用户可凭账号密码登录</p>
-          </div> -->
         </el-form>
       </div>
     </div>
@@ -65,7 +60,23 @@ export default {
   mounted () {
   },
   methods: {
+      submitForm (loginForm) {
+        console.log()
+        this.$refs[loginForm].validate((valid) => {
+          if (valid) {
+            let userinfo = this.loginForm;
+            this.$http({
+              method: 'get',
+              url: 'api/user/userLogin',
+              params: userinfo,
+            }).then((res) => {
+              console.log(res);
+            })
+          }else{
 
+          }
+        })
+      }
   }
 }
 </script>
