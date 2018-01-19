@@ -1,17 +1,5 @@
 <template>
-  <div id="InContent">
-    <div>
-      <ul>
-        <li>
-          <img src="../assets/images/微信图片_20180117094650.jpg" class="img-box">
-          <div class="test-box">5545454</div>
-          <div class="button-box">
-            <button>5656565</button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>

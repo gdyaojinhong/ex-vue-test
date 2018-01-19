@@ -25,16 +25,19 @@ const UserSchema = new Schema({
 	UserId: String
 })
 
-const userListSchema = new Schema({
+const UserListSchema = new Schema({
 	_id: Schema.Types.ObjectId,
 	userName: String,
 	passWord: String,
-	createTime: Number,
-	UserId: String
-})
+	modifyTime: { type: Date, default: Date.now },
+	},{
+	    versionKey: false,
+	    timestamps: { createdAt: 'modifyTime'}
+	}
+)
 const Models = {
 	Users: mongoose.model('users', UserSchema,'users',false),
-	UserList: mongoose.model('userList', userListSchema,'userList',false)
+	UserList: mongoose.model('userList', UserListSchema,'userList',false)
 }
 
 module.exports = Models;	

@@ -53,17 +53,6 @@ const updateUserInfo = function(p,reqData,res){
 }
 
 
-exports.getUserList = (req, res) => {
-  let params = req.query;
-  const p = models.Users;
-	p.create({
-		"name": params.name,
-		"id": params.id,
-		"url": "url", 
-	},function(err,data){
-		execCallback(p,err,data,res)
-	})
-}
 //用户登录新增用户和更新用户
 exports.userLogin = (req, res) => {
 	let userName = req.query.userName;
@@ -105,17 +94,12 @@ exports.userLogin = (req, res) => {
 	})
 }
 //获取用户列表数据
-export.getUserList = (req, res) =>{
-	console.log('获取用户登录列表')；
+exports.getUserList = (req, res) =>{
+	console.log('获取用户登录列表');
 	let pageNum = parseInt(req.query.pageNum);
-	let pageSize = pageIndex(req.query.pageSize);
-	let m = models.InfoList.find({});
-	let p = models.InfoList;
-	let start = (pageIndex-1)*pageSize;
-	m.skip(start);
-	m.limit(pageSize);
-	m.sort({'modifyTime':'desc'});//排序[asc表示升序，desc表示降序]
-	m.exec(function(err,data){
-		execCallback(q,err,data,res);
+	let pageSize = parseInt(req.query.pageSize);
+	let p = models.Users;
+	p.find().exec(function(err,data){
+		execCallback(p,err,data,res);
 	})
 }

@@ -5,6 +5,6 @@ let router = express.Router();
 
 
 router.get(api.userLogin, getApi.userLogin);
-
+router.get(api.getUserList,getApi.getUserList);
 module.exports = router;
 

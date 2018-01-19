@@ -3,11 +3,13 @@
     default-active="1"
     class="el-menu-vertical-demo"
     @open="handleOpen"
-    @close="handleClose">
-    <el-menu-item index="1">
+    @close="handleClose"
+    :router="true"
+    >
+    <el-menu-item index="home">
       <span slot="title">首页</span>
     </el-menu-item>
-    <el-menu-item index="2">
+    <el-menu-item index="userlist">
       <span slot="title">用户列表</span>
     </el-menu-item>
 <!--     <el-menu-item index="2">
