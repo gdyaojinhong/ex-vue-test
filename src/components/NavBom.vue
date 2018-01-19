@@ -1,6 +1,6 @@
 <template>
   <div id="NavBom" class="NavBom">
-    NavBom
+    Copyright © 2011-2018 SegmentFault. 当前呈现版本 17.06.16
   </div>
 </template>
 
@@ -38,5 +38,7 @@ body {
 }
 .NavBom{
   text-align: center;
+  font-size: 12px;
+  color: #999999;
 }
 </style>

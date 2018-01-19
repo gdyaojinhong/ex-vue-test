@@ -1,17 +1,18 @@
 <template>
   <div id="">
-    <div>用户列表</div>
+    <div class="userList-title">用户列表</div>
     <div>
     <el-table
       :data="tableData"
-      style="width: 100%">
+      stripe
+      class="userlist-table">
       <el-table-column
         prop="id"
         label="id"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="name"
+        prop="userName"
         label="name"
         width="180">
       </el-table-column>
@@ -67,5 +68,15 @@ export default {
 }
 body {
   background-color: #F5F5F5;
+}
+.userlist-table{
+  border-width: 1px 1px 0 1px;
+  border-color: #ececec;
+  border-style: solid;
+  width: 80%;
+}
+.userList-title{
+  font-size: 26px;
+  margin-bottom: 30px;
 }
 </style>
