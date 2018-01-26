@@ -12,9 +12,6 @@
     <el-menu-item index="userlist">
       <span slot="title">用户列表</span>
     </el-menu-item>
-<!--     <el-menu-item index="2">
-      <span slot="title">信息列表</span>
-    </el-menu-item> -->
     <el-submenu index="3">
       <template slot="title">
         <span>信息管理</span>

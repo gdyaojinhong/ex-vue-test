@@ -96,10 +96,16 @@ exports.userLogin = (req, res) => {
 //获取用户列表数据
 exports.getUserList = (req, res) =>{
 	console.log('获取用户登录列表');
+	console.log(req.query)
 	let pageNum = parseInt(req.query.pageNum);
 	let pageSize = parseInt(req.query.pageSize);
+	let m = models.Users.find({});
 	let p = models.Users;
-	p.find().exec(function(err,data){
+	let start = (pageNum-1)*pageSize;
+	m.ship(start);
+	m.limit(pageSize);
+	// m.sort({'createTime':'desc'});
+	m.exec(function(err,data){
 		execCallback(p,err,data,res);
 	})
 }

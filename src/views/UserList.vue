@@ -13,12 +13,12 @@
       </el-table-column>
       <el-table-column
         prop="userName"
-        label="name"
+        label="账号"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="url"
-        label="url">
+        prop="passWord"
+        label="密码">
       </el-table-column>
     </el-table>
     </div>

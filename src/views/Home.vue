@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div class="home">
+    欢迎进入阿喀琉斯
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 export default {
   data () {
     return {
+      tableData: ''
     }
   },
   components: {
@@ -27,15 +28,11 @@ export default {
 }
 </script>
 
-<style>
-* {
-  padding: 0;
-  margin: 0;
-}
-body {
-  background-color: #ffffff !important;
-}
-#app{
-  height: 100%;
+<style lang="less" scoped>
+.home{
+  text-align: center;
+  font-size: 36px;
+  margin-top: 120px;
+  color: #999999;
 }
 </style>

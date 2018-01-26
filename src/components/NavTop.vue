@@ -1,8 +1,8 @@
 <template>
-  <div id="navTop">
+    <div >
     <div class="navTop-title">AkLS后台管理系统</div>
     <div></div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 * {
   padding: 0;
   margin: 0;
@@ -38,9 +38,12 @@ body {
   background-color: #F5F5F5;
 }
 .navTop-title{
-  height: 60px;
   line-height: 60px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
+}
+.el-footer{
+  position: relative;
+  bottom: 0;
 }
 </style>
