@@ -1,18 +1,16 @@
 <template>
   <div id="login-page">
-    <div class="">
-      <div class="login-content">
-        <div class="login-title">
-          <span>AkLS后台管理系统</span>
-        </div>
+    <el-card class="box-card">
+      <div slot="header" class="clearfix">
+        <span class="header-title">AkLS后台管理系统</span>
+      </div>
+      <div class="text item">
         <el-form :model="loginForm" ref="loginForm" class="loginForm" :rules="rules">
           <el-form-item prop="userName">
-            <span>用户名</span>
             <span class="fa-tips"><i class="fa fa-user"></i></span>
             <el-input v-model="loginForm.userName" placeholder="用户名"></el-input>
           </el-form-item>
           <el-form-item prop="passWord">
-            <span>密码</span>
             <span class="fa-tips"><i class="fa fa-lock"></i></span>
             <el-input v-model="loginForm.passWord" placeholder="密码"></el-input>
           </el-form-item>
@@ -23,7 +21,7 @@
           </el-form-item>
         </el-form>
       </div>
-    </div>
+    </el-card>
   </div>
 </template>
 
@@ -82,6 +80,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
+  .box-card {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: -200px;
+    border-radius: 4px;
+  }
 .login-page{
   position: relative;
   width: 100%;
@@ -104,5 +112,8 @@ export default {
 .login-tiparea{
   font-size: 12px;
   color: #666666;
+}
+.clearfix{
+  text-align: center;
 }
 </style>

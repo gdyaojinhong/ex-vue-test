@@ -40,5 +40,9 @@ body {
   text-align: center;
   font-size: 12px;
   color: #999999;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -175px;
 }
 </style>

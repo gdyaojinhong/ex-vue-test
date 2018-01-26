@@ -1,23 +1,17 @@
 <template>
   <div id="home">
-  <el-container style="height:100%">
+  <el-container style="height:100%,width:100%">
     <el-header style="border-bottom: 1px solid #eee,height: 80px; background-color: rgb(2, 135, 44);">
       <nav-top></nav-top>
     </el-header>
-    <el-container>
       <el-aside width="200px">
         <menu-left></menu-left>
       </el-aside>
       <el-main>
         <in-content></in-content>
       </el-main>
-    </el-container>
   </el-container>
-    <el-container style="border-top: 1px solid #eee,border-bottom: 1px solid #eee position: absolute,bottom: 0,left: 50%;">
-      <el-footer style="  ">
-        <nav-bom></nav-bom>
-      </el-footer>
-    </el-container>
+      <nav-bom></nav-bom>
   </div>
 </template>
 
@@ -51,7 +45,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.c{
-
+.el-main{
+  margin-left: 200px;
 }
 </style>
