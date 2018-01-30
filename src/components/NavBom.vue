@@ -1,6 +1,6 @@
 <template>
   <div id="NavBom" class="NavBom">
-    Copyright © 2011-2018 SegmentFault. 当前呈现版本 17.06.16
+    Copyright © 2011-2018 SegmentFault. 当前呈现版本 18.01.29
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 * {
   padding: 0;
   margin: 0;

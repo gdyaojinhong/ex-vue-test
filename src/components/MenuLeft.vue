@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .el-menu-vertical-demo{
     height: 100%;
     display: block;
