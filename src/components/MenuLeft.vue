@@ -46,16 +46,16 @@
         <el-menu-item index="5-2">审核列表</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-submenu index="5">
+    <el-submenu index="UserList">
       <template slot="title">
         <span>角色管理</span>
       </template>
       <el-menu-item-group>
-        <el-menu-item index="5-1">角色列表</el-menu-item>
-        <el-menu-item index="5-2">管理权限</el-menu-item>
+        <el-menu-item index="UserList">角色列表</el-menu-item>
+        <el-menu-item index="6-2">管理权限</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-menu-item index="userlist">
+    <el-menu-item index="7">
       <span slot="title">关于</span>
     </el-menu-item>
   </el-menu>

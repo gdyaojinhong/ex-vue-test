@@ -10,11 +10,15 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/',
       name: 'index',
       component: Index,
       children :[
         {
-          path: 'Home',
+          path: '/home',
           component: Home
         },
         {

@@ -1,7 +1,7 @@
 <template>
   <div id="home">
   <el-container style="height:100%,width:100%">
-    <el-header style="border-bottom: 1px solid #eee,height: 80px; background-color: rgb(2, 135, 44);">
+    <el-header style="border-bottom: 1px solid #eee;height: 80px;background-color: rgb(2, 135, 44);">
       <nav-top></nav-top>
     </el-header>
       <el-aside width="200px">

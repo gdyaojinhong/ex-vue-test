@@ -1,5 +1,5 @@
 <template>
-  <div id="login-page">
+  <div class="login-page">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
         <span class="header-title">AkLS后台管理系统</span>
@@ -71,7 +71,7 @@ export default {
               console.log(res);
             })
           }else{
-
+            return;
           }
         })
       }
@@ -91,9 +91,13 @@ export default {
     border-radius: 4px;
   }
 .login-page{
-  position: relative;
+  overflow: hidden;
+  position: absolute;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  background-image: url("../assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .login-content{
   width: 370px;

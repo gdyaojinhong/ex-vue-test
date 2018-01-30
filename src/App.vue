@@ -32,10 +32,11 @@ export default {
   padding: 0;
   margin: 0;
 }
-body {
-  background-color: #ffffff !important;
+html body {
+  min-height: 100%;
+  width: 100%;
 }
 #app{
-  height: 100%;
+  min-height: 100%;
 }
 </style>

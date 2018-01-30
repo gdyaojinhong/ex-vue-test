@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     欢迎进入阿喀琉斯
+
   </div>
 </template>
 
@@ -8,7 +9,6 @@
 export default {
   data () {
     return {
-      tableData: ''
     }
   },
   components: {
