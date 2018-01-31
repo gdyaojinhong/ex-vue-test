@@ -60,15 +60,16 @@ export default {
   methods: {
       submitForm (loginForm) {
         console.log()
-        this.$refs[loginForm].validate((valid) => {
+        var that = this;
+        that.$refs[loginForm].validate((valid) => {
           if (valid) {
-            let userinfo = this.loginForm;
-            this.$http({
+            let userinfo = that.loginForm;
+            that.$http({
               method: 'get',
               url: 'api/user/userLogin',
               params: userinfo,
             }).then((res) => {
-              console.log(res);
+              that.$router.push({path:'../home'})
             })
           }else{
             return;

@@ -95,17 +95,32 @@ exports.userLogin = (req, res) => {
 }
 //获取用户列表数据
 exports.getUserList = (req, res) =>{
-	console.log('获取用户登录列表');
 	console.log(req.query)
 	let pageNum = parseInt(req.query.pageNum);
 	let pageSize = parseInt(req.query.pageSize);
-	let m = models.Users.find({});
+	let m = models.Users.find();
 	let p = models.Users;
 	let start = (pageNum-1)*pageSize;
-	m.ship(start);
+	console.log(start)
+	m.skip(start);
 	m.limit(pageSize);
-	// m.sort({'createTime':'desc'});
+	m.sort({'createTime':'desc'});
 	m.exec(function(err,data){
 		execCallback(p,err,data,res);
+	})
+}
+
+//删除用户数据
+exports.delUser = (req, res) =>{
+	let userName = req.query.userName;
+	let where = {'userName' : userName};
+	let m = models.Users.remove(where);
+	let p = models.Users;
+	m.exec(function(err,data){
+		if(err){
+			res.send({'status':0,'data':'','message':"删除失败",'count':''});  
+		}else{
+			res.send({'status':1,'data':data,'message':'删除成功','count':''});
+		}
 	})
 }

@@ -28,10 +28,7 @@ export default {
 </script>
 
 <style>
-* {
-  padding: 0;
-  margin: 0;
-}
+
 html body {
   min-height: 100%;
   width: 100%;
