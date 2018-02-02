@@ -11,7 +11,6 @@
         <in-content></in-content>
       </el-main>
   </el-container>
-      <nav-bom></nav-bom>
   </div>
 </template>
 

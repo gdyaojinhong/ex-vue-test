@@ -46,12 +46,12 @@
         <el-menu-item index="5-2">审核列表</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-submenu index="UserList">
+    <el-submenu index="/userlist">
       <template slot="title">
         <span>角色管理</span>
       </template>
       <el-menu-item-group>
-        <el-menu-item index="UserList">角色列表</el-menu-item>
+        <el-menu-item index="/userlist">角色列表</el-menu-item>
         <el-menu-item index="6-2">管理权限</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
@@ -92,7 +92,7 @@ export default {
 .el-menu-vertical-demo{
     height: 100%;
     display: block;
-    position: fixed;
+    position: absolute;
     width: 200px;
 }
 

@@ -22,7 +22,7 @@ export default new Router({
           component: Home
         },
         {
-          path: 'userlist',
+          path: '/userlist',
           component: UserList
         }
       ]
