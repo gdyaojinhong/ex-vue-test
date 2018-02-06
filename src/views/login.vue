@@ -26,7 +26,7 @@
 </template>
 
 <script>
-
+import * as utils from '../utils/utils.js'
 export default {
   name: 'login',
   data () {
@@ -58,25 +58,31 @@ export default {
   mounted () {
   },
   methods: {
-      submitForm (loginForm) {
+    submitForm (loginForm) {
         console.log()
         var that = this;
         that.$refs[loginForm].validate((valid) => {
           if (valid) {
-            let userinfo = that.loginForm;
+            let userinfo = that.loginForm
             that.$http({
               method: 'get',
               url: 'api/user/userLogin',
               params: userinfo,
             }).then((res) => {
-              console.log(res);
+              that.saveUserInfo(userinfo.userName)
               that.$router.push({path:'../home'})
             })
           }else{
             return;
           }
         })
+      },
+    saveUserInfo(userName){
+      var userInfo = {
+        'userName' : userName
       }
+      utils.setStore('userInfo',userInfo)
+    }
   }
 }
 </script>
