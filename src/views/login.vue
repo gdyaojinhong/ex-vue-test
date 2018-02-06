@@ -69,7 +69,7 @@ export default {
               url: 'api/user/userLogin',
               params: userinfo,
             }).then((res) => {
-              that.saveUserInfo(userinfo.userName)
+              that.saveUserInfo(userinfo)
               that.$router.push({path:'../home'})
             })
           }else{
@@ -77,11 +77,8 @@ export default {
           }
         })
       },
-    saveUserInfo(userName){
-      var userInfo = {
-        'userName' : userName
-      }
-      utils.setStore('userInfo',userInfo)
+    saveUserInfo(userinfo){
+      utils.setStore('userInfo',userinfo)
     }
   }
 }
