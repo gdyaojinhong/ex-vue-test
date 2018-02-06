@@ -69,6 +69,7 @@ export default {
               url: 'api/user/userLogin',
               params: userinfo,
             }).then((res) => {
+              console.log(res);
               that.$router.push({path:'../home'})
             })
           }else{
