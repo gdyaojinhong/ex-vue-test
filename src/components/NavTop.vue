@@ -1,11 +1,11 @@
 <template>
     <div class="nav">
-      <div class="navTop-title">AkLS后台管理系统</div>
+      <div class="navTop-title"><!-- AkLS后台管理系统 --></div>
       <div class="user-info">
         <img src="../assets/images/user-info.png">
         <div class="info-username">
           <p>欢迎</p>
-          <p>林小小</p>
+          <p>{{userInfo.userName}}</p>
         </div>
         <div class="info-select">
           <el-dropdown trigger="click" @command="chiceType">
@@ -27,10 +27,12 @@
 </template>
 
 <script>
+import * as utils from '../utils/utils.js'
 export default {
   name: 'navTop',
   data () {
     return {
+      userInfo:''
     }
   },
   components: {
@@ -43,13 +45,17 @@ export default {
   beforeMount () {
   },
   mounted () {
+     this.userInfo =  utils.getStore('userInfo');
   },
   methods: {
     quit (){
       console.log("退出")
       this.$router.push({path:"../login"})
-    },
+    },  
     chiceType (command) {
+      if (command == "quit") {
+        this.$router.push({path:"../login"})
+      }
       console.log(command)
     }
   }
