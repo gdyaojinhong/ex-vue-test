@@ -1,6 +1,6 @@
 <template>
     <div class="nav">
-      <div class="navTop-title">AkLS后台管理系统</div>
+      <div class="navTop-title"><!-- AkLS后台管理系统 --></div>
       <div class="user-info">
         <img src="../assets/images/user-info.png">
         <div class="info-username">
