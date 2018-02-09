@@ -61,5 +61,27 @@ const actions = {
 			commit(types.ADD_MENU,menuitems)
 		}
 	},
+	loadRoutes : ({commit}) => {
+		commit(types.LOAD_ROUTES)
+	},
+	handleLeftMenu : ({ commit }) => {
+		commit({types.HANDLE_LEFT_MENU})
+	},
+	initLeftMenu : ({ commit }) => {
+		commit({types.INIT_LEFT_MENU})
+	},
+    setLeftCollapse:({ commit}) => {  
+       commit(types.SET_LEFT_COLLAPSE)  
+    },
+    dropName:({ commit}) => {  
+       commit(types.DROP_NAME)  
+    }	
 	
+}
+
+export default {
+	state,
+	getters,
+	mutations,
+	actions
 }

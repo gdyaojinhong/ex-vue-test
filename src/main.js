@@ -5,13 +5,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueRouter from 'vue-router'
-// import Vuex from 'vuex'
+import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import axios from 'axios'
 import './assets/css/theme/index.css'
 
 Vue.use(VueRouter)
-// Vue.use(Vuex)
+Vue.use(Vuex)
 Vue.use(ElementUI)
 
 Vue.prototype.$http = axios

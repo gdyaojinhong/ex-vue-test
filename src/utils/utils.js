@@ -49,3 +49,24 @@ export function delCookie (name) {
  if (cval != null)
   document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
 };
+
+
+/**
+ * 需要递归循环children,重新赋值component
+ */
+// export const generateRoutesFromMenu = (menuData = [], routes = [],componentNew)=>{
+//    for(var i = 0;i < menuData.length;i++){
+//         const menuobj = menuData[i]
+//         const component = menuData[i].component
+//         if( component && component !== 'content'){
+//             componentNew = require('page/'+menuData[i].component+'.vue')
+//         }else{
+//             // componentNew = require('layout/'+menuData[i].component+'.vue')
+//         }
+//         menuobj['component'] = componentNew
+//         routes.push(menuobj) 
+//         generateRoutesFromMenu(menuobj.children)
+//   }
+//   return routes
+// }
+

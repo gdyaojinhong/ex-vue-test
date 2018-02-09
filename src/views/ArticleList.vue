@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    欢迎进入阿喀琉斯
+  <div>
+    文章列表
   </div>
 </template>
 
@@ -28,10 +28,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.home{
-  text-align: center;
-  font-size: 36px;
-  margin-top: 120px;
-  color: #999999;
+.el-main{
+  margin-left: 200px;
 }
 </style>

@@ -6,6 +6,8 @@ import Index from '@/views/Index'
 import Login from '@/views/Login'
 import UserList from '@/views/UserList'
 import Home from '@/views/Home'
+import CreateArticle from "@/views/CreateArticle"
+
 export default new Router({
   routes: [
     {
@@ -24,6 +26,10 @@ export default new Router({
         {
           path: '/userlist',
           component: UserList
+        },
+        {
+          path: '/createarticle',
+          component: CreateArticle
         }
       ]
     },
