@@ -171,3 +171,41 @@ exports.updateUser = (req, res) => {
  		}
  	})
 }
+
+
+//新增文章
+exports.addArtices = (req, res) => {
+	console.log("----addArtices新增----")
+	const id = mongoose.Types.ObjectId();
+	const q = models.ArticlesList;
+	console.log("addArtices")
+	q.create({
+		"_id" : id,
+		"title" : req.query.title,
+		"abstracts" : req.query.abstracts,
+		"author" : req.query.author,
+		"content" : req.query.content,
+		"publishDate" : req.query.publishDate
+	},function(err,data){
+		callback(err, data, res);
+	})
+}
+
+
+//获取文章列表
+exports.articesList = (req, res) =>{
+	console.log(req.query)
+	console.log("articesList")
+	let pageNum = parseInt(req.query.pageNum);
+	let pageSize = parseInt(req.query.pageSize);
+	let m = models.ArticlesList.find();
+	let p = models.ArticlesList;
+	let start = (pageNum-1)*pageSize;
+	console.log(start)
+	m.skip(start);
+	m.limit(pageSize);
+	m.sort({'createTime':'desc'});
+	m.exec(function(err,data){
+		execCallback(p,err,data,res);
+	})
+}

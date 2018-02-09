@@ -35,9 +35,21 @@ const UserListSchema = new Schema({
 	    timestamps: { createdAt: 'modifyTime'}
 	}
 )
+
+//文章
+const ArticlesListSchema = new Schema({
+	_id : Schema.Types.ObjectId,
+	title : String,
+	abstracts : String,
+	author : String,
+	content : String,
+	publishDate : String
+})
+
 const Models = {
 	Users: mongoose.model('users', UserSchema,'users',false),
-	UserList: mongoose.model('userList', UserListSchema,'userList',false)
+	UserList: mongoose.model('userList', UserListSchema,'userList',false),
+	ArticlesList: mongoose.model('articlesList', ArticlesListSchema,'articlesList',false)
 }
 
 module.exports = Models;	

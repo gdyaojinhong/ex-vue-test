@@ -6,5 +6,7 @@ module.exports = {
   getUserList: path + '/user/userlist',
   delUser: path + '/user/delUser',
   addUser: path + '/user/addUser',
-  updateUser: path + '/user/updateUser'
+  updateUser: path + '/user/updateUser',
+  addArtices: path + '/artices/addArtices',
+  articesList: path + '/artices/articesList'
 }

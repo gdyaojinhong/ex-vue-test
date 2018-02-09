@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import * as utils from '../utils/utils.js'
 import { VueEditor } from 'vue2-editor'  
   export default {
     data() {
@@ -37,10 +38,6 @@ import { VueEditor } from 'vue2-editor'
           abstracts: [
             { required: true, message: '请输入摘要', trigger: 'blur' },
             { min: 10, max: 100, message: '长度在 10 到 100 个字符', trigger: 'blur' }
-          ],
-          content: [
-            { required: true, message: '请输入摘要', trigger: 'blur' },
-            { min: 10, max: 1000, message: '长度在 10 到 1000 个字符', trigger: 'blur' }
           ]
         }
       };
@@ -49,9 +46,25 @@ import { VueEditor } from 'vue2-editor'
     methods: {
       submitForm(formName) {
         console.log(formName)
+        let this_ =this;
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            const newData = Date.parse(new Date());
+            const userName = utils.getStore('userInfo').userName
+            const params = {
+              "title" : this_.ruleForm.title,
+              "abstracts" : this_.ruleForm.abstracts,
+              "content" : this_.ruleForm.content,
+              "publishDate" : newData,
+              "author" : userName
+            }
+            this_.$http({
+              method: 'get',
+              url: 'api/artices/addArtices',
+              params: params,
+            }).then((res) => {
+              console.log(res)
+            })
           } else {
             console.log('error submit!!');
             return false;
