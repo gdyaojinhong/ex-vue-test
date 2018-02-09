@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     欢迎进入阿喀琉斯
-
+    欢迎进入阿喀琉斯
   </div>
 </template>
 
