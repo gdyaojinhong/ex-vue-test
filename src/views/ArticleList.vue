@@ -20,6 +20,7 @@ export default {
   beforeMount () {
   },
   mounted () {
+
   },
   methods: {
 
