@@ -9,6 +9,7 @@ import Home from '@/views/Home'
 import Content from '@/components/Content'
 import CreateArticle from "@/views/CreateArticle"
 import ArticleList from "@/views/ArticleList"
+import ArticlelDetail from "@/views/ArticlelDetail"
 
 export default new Router({
   routes: [
@@ -40,6 +41,10 @@ export default new Router({
             {
               path: '/article/articlelist',
               component: ArticleList
+            },
+            {
+              path: '/article/articleldetail',
+              component: ArticlelDetail
             }
           ]
         },

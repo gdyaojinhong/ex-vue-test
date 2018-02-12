@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="articesList">
     <div class="articesList-title"><h3>文章列表</h3></div>
       <el-table
         :data="tableData.data"
@@ -17,7 +17,7 @@
           header-align="conter"
           >
            <template slot-scope="scope">
-               <span class="title" @click="showFundArticle(scope.row)">{{scope.row.title}}</span>
+               <span class="articesList-titleLink" @click="showFundArticle(scope.row)">{{scope.row.title}}</span>
            </template> 
         </el-table-column>
         <el-table-column
@@ -106,6 +106,7 @@ export default {
     },
     showFundArticle(row) {
       console.log(row)
+      this.$router.push({path:'./articleldetail',query:{'row':row}})
     },
     handleSizeChange(val) {
       let paramsSting = 'pageSize';
@@ -116,8 +117,29 @@ export default {
       this.getDatas(paramsSting,val)
 
     },
-    handleDelete(){
-      
+    handleDelete(index, row){
+      console.log(row)
+        console.log("删除")
+        let that = this;
+        if (row.title) {
+          that.$http({
+            mounted:'get',
+            url : "/api/artices/delArtices",
+            params : {
+              'title' : row.title
+            }
+          }).then((res)=>{
+            let data = res.data;
+            this.$message({
+              type: 'success',
+              message: '删除成功',
+              onClose:function(){
+                that.getDatas();
+              }
+            });
+
+          })
+        }
     }
   }
 }
@@ -128,7 +150,7 @@ export default {
   margin-left: 200px;
 }
 .articesList{
-  margin-bottom: 60px;
+  padding: 20px;
 }
 .articesList-table{
   border-width: 1px 1px 0 1px;
@@ -157,5 +179,9 @@ export default {
   text-align: right;
   display: inline-block;
   float: left;
+}
+.articesList-titleLink{
+  cursor: pointer;
+  text-decoration: underline;
 }
 </style>

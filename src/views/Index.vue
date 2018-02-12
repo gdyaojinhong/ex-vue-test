@@ -46,5 +46,6 @@ export default {
 <style lang="less" scoped>
 .el-main{
   margin-left: 200px;
+  padding: 0px !important;
 }
 </style>

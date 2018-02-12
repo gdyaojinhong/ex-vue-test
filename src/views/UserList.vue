@@ -289,6 +289,7 @@ export default {
 <style lang="less" scoped>
 .userList{
   margin-bottom: 60px;
+  padding: 20px;
 }
 .userlist-table{
   border-width: 1px 1px 0 1px;

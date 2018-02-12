@@ -10,4 +10,6 @@ router.get(api.addUser, getApi.addUser)
 router.get(api.updateUser, getApi.updateUser)
 router.get(api.addArtices, getApi.addArtices)
 router.get(api.articesList, getApi.articesList)
+router.get(api.delArtices, getApi.delArtices)
+
 module.exports = router
