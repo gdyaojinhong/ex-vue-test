@@ -55,13 +55,13 @@
         <el-menu-item index="6-2">管理权限</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-submenu index="/createarticle">
+    <el-submenu index="/article">
       <template slot="title">
         <span>文章</span>
       </template>
       <el-menu-item-group>
-        <el-menu-item index="/createarticle">发布文章</el-menu-item>
-        <el-menu-item index="/articlelist">文章列表</el-menu-item>
+        <el-menu-item index="/article/createarticle">发布文章</el-menu-item>
+        <el-menu-item index="/article/articlelist">文章列表</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-menu-item index="7">

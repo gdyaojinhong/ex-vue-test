@@ -6,18 +6,19 @@ import Index from '@/views/Index'
 import Login from '@/views/Login'
 import UserList from '@/views/UserList'
 import Home from '@/views/Home'
+import Content from '@/components/Content'
 import CreateArticle from "@/views/CreateArticle"
 import ArticleList from "@/views/ArticleList"
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      redirect: '/home'
+      path: '/login',
+      name: 'login',
+      component: Login
     },
     {
       path: '/',
-      name: 'index',
       component: Index,
       children :[
         {
@@ -29,19 +30,20 @@ export default new Router({
           component: UserList
         },
         {
-          path: '/createarticle',
-          component: CreateArticle
+          path: '/article',
+          component: Content,
+          children :[
+            {
+              path: '/article/createarticle',
+              component: CreateArticle
+            },
+            {
+              path: '/article/articlelist',
+              component: ArticleList
+            }
+          ]
         },
-        {
-          path: '/articlelist',
-          component: ArticleList
-        }
       ]
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
     }
   ]
 })

@@ -9,6 +9,7 @@ import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import axios from 'axios'
 import './assets/css/theme/index.css'
+import  './assets/js/fliters' 
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
