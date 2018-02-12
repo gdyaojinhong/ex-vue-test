@@ -209,3 +209,18 @@ exports.articesList = (req, res) =>{
 		execCallback(p,err,data,res);
 	})
 }
+
+//删除文章数据
+exports.delArtices = (req, res) =>{
+	let title = req.query.title;
+	let where = {'title' : title};
+	let m = models.ArticlesList.remove(where);
+	let p = models.ArticlesList;
+	m.exec(function(err,data){
+		if(err){
+			res.send({'status':0,'data':'','message':"删除失败",'count':''});
+		}else{
+			res.send({'status':1,'data':data,'message':'删除成功','count':''});
+		}
+	})
+}

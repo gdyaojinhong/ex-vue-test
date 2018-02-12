@@ -8,5 +8,8 @@ module.exports = {
   addUser: path + '/user/addUser',
   updateUser: path + '/user/updateUser',
   addArtices: path + '/artices/addArtices',
-  articesList: path + '/artices/articesList'
+  articesList: path + '/artices/articesList',
+  delArtices: path + '/artices/delArtices'
+
+  
 }

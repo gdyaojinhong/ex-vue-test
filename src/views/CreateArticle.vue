@@ -33,7 +33,7 @@ import { VueEditor } from 'vue2-editor'
         rules: {
           title: [
             { required: true, message: '请输入标题', trigger: 'blur' },
-            { min: 10, max: 30, message: '长度在 10 到 30 个字符', trigger: 'blur' }
+            { min: 1, max: 10, message: '长度在 1 到 10 个字符', trigger: 'blur' }
           ],
           abstracts: [
             { required: true, message: '请输入摘要', trigger: 'blur' },
@@ -63,11 +63,20 @@ import { VueEditor } from 'vue2-editor'
               url: 'api/artices/addArtices',
               params: params,
             }).then((res) => {
-              console.log(res)
+              if (res.data.status === 1) {
+                this.$message({
+                  message: '发布成功',
+                  type: 'success',
+                  onClose:function(){
+                    this_.$router.push({path:'../articlelist'});
+                  }
+                });
+              }else{
+                this.$message('发布失败');
+              }
             })
           } else {
-            console.log('error submit!!');
-            return false;
+            this.$message('请输入正确的格式！');
           }
         });
       },
