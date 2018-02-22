@@ -10,7 +10,7 @@
     <el-menu-item index="home">
       <span slot="title">首页</span>
     </el-menu-item>
-    <el-submenu index="2">
+<!--     <el-submenu index="2">
       <template slot="title">
         <span>菜单管理</span>
       </template>
@@ -45,14 +45,14 @@
         <el-menu-item index="5-1">店铺审核</el-menu-item>
         <el-menu-item index="5-2">审核列表</el-menu-item>
       </el-menu-item-group>
-    </el-submenu>
+    </el-submenu> -->
     <el-submenu index="/userlist">
       <template slot="title">
         <span>角色管理</span>
       </template>
       <el-menu-item-group>
         <el-menu-item index="/userlist">角色列表</el-menu-item>
-        <el-menu-item index="6-2">管理权限</el-menu-item>
+<!--         <el-menu-item index="6-2">管理权限</el-menu-item> -->
       </el-menu-item-group>
     </el-submenu>
     <el-submenu index="/article">
@@ -64,7 +64,7 @@
         <el-menu-item index="/article/articlelist">文章列表</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-menu-item index="7">
+    <el-menu-item index="/abouts">
       <span slot="title">关于</span>
     </el-menu-item>
   </el-menu>
