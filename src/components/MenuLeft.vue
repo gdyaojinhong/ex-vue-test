@@ -60,8 +60,13 @@
         <span>文章</span>
       </template>
       <el-menu-item-group>
+<<<<<<< HEAD
+        <el-menu-item index="/createarticle">发布文章</el-menu-item>
+        <el-menu-item index="/articlelist">文章列表</el-menu-item>
+=======
         <el-menu-item index="/article/createarticle">发布文章</el-menu-item>
         <el-menu-item index="/article/articlelist">文章列表</el-menu-item>
+>>>>>>> origin/dev
       </el-menu-item-group>
     </el-submenu>
     <el-menu-item index="/abouts">
