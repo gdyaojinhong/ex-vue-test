@@ -7,7 +7,7 @@
     @close="handleClose"
     :router="true"
     >
-    <el-menu-item index="home">
+    <el-menu-item index="/home">
       <span slot="title">首页</span>
     </el-menu-item>
 <!--     <el-submenu index="2">
